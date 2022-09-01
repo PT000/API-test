@@ -55,8 +55,10 @@ docker run \
 
    I , editera
    ESC 
+   
    :w Spara ändring
    :q för att lämna
+   
 
    git add .
    git commit -m "Message"
