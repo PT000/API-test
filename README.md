@@ -3,7 +3,7 @@ Time To First "Hello, World!" (TTFHW, sometimes known as bootstrap time) represe
 How long it takes for a developer to get started and begin being productive in an organisation.
 
 
-# Skapa container i Docker
+# Skapa en MySQL Docker Container
 docker run \
     --name test-mysql \
     -e MYSQL_ROOT_PASSWORD=root \
@@ -13,6 +13,18 @@ docker run \
     -p 3306:3306 \
     --tmpfs /var/lib/mysql  \
     -d mysql/mysql-server:latest
+    
+  
+ # Skapa MongoDB Docker Container 
+ 
+ docker run -d --name test-mongodb \
+    -p 27017:27017 \
+    -e MONGO_INITDB_ROOT_USERNAME=root \
+    -e MONGO_INITDB_ROOT_PASSWORD=root \
+    mongo
+    
+    docker logs test-mongodb --follow
+ 
 
 # API-test
 Demonstrating tests
