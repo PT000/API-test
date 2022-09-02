@@ -1,6 +1,6 @@
 # API-test
 Demonstrating a way to run tests, 
-Creates an dynamic Backend server and SQLite-DB in memory of the client that's running the tests.
+Creates an dynamic Backend server and SQLite-DB in the memory of the client that's running the tests.
 Tests all of the API (CRUD) If you want it run at an actual database just put in the URL for the database instead of "memory" 
 Just type: 
 npm test 
