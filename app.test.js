@@ -15,7 +15,7 @@ test('get persons', () => {
         seedDb(db);
         const res = await request(app).get('/');
         const response = [
-            { name: 'Jane', id: 1, age: 1 }
+            { name: 'Anna', id: 1, age: 1 }
         ]
         expect(res.status).toBe(200);
         expect(res.body).toEqual(response);
@@ -27,11 +27,11 @@ test('add person', () => {
         seedDb(db);
         await request(app)
             .post('/')
-            .send({ name: 'Joe', age: 2 });
+            .send({ name: 'John', age: 2 });
         const res = await request(app).get('/');
         const response = [
-            { name: 'Jane', id: 1, age: 1 },
-            { name: 'Joe', id: 2, age: 2 }
+            { name: 'Anna', id: 1, age: 1 },
+            { name: 'John', id: 2, age: 2 }
         ]
         expect(res.status).toBe(200);
         expect(res.body).toEqual(response);
@@ -42,7 +42,7 @@ test('update person', () => {
         seedDb(db);
         await request(app)
             .put('/1')
-            .send({ name: 'Joe', age: 2 });
+            .send({ name: 'John', age: 2 });
         const res = await request(app).get('/');
         const response = [
             { name: 'Jane', id: 1, age: 1 }
