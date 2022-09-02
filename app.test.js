@@ -7,7 +7,7 @@ const seedDb = db => {
     db.run('CREATE TABLE IF NOT EXISTS persons (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)');
     db.run('DELETE FROM persons');
     const stmt = db.prepare('INSERT INTO persons (name, age) VALUES (?, ?)');
-    stmt.run('Jane', 1);
+    stmt.run('Anna', 1);
     stmt.finalize();
 }
 test('get persons', () => {
