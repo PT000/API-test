@@ -1,7 +1,7 @@
 # API-test
 A way to run tests, 
 Creates an dynamic (which means that the Backend server starts and stops during the test) The SQLite-DB is created in the memory at the client that's running the tests.
-Tests all of the API (CRUD) If you want it run too an existing database just change the URL for the existense database instead of "memory" 
+Tests all of the API (CRUD) If you want it run to an existing database just change the URL for the existense database instead of "memory" 
 Beware of what's in seedDB it must at least have one entry in the DB! Otherwise "GET" will fail
 
 Just type: 
