@@ -1,7 +1,9 @@
 # API-test
-Demonstrating a way to run tests, 
+A way to run tests, 
 Creates an dynamic Backend server and SQLite-DB in the memory of the client that's running the tests.
-Tests all of the API (CRUD) If you want it run at an actual database just put in the URL for the database instead of "memory" 
+Tests all of the API (CRUD) If you want it run at an existing database just change the URL for the existense database instead of "memory" 
+Beware of what's in seedDB it must at least have one entry in the DB! Otherwise "GET" will fail
+
 Just type: 
 npm test 
 
